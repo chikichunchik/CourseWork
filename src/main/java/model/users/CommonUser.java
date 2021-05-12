@@ -18,6 +18,7 @@ public class CommonUser extends Guest{ // клас описує актора "з
         UsersDatabase.addUser(name, this);
     }
 
+    @Override
     public String getName() {
         return name;
     }

@@ -17,13 +17,14 @@
 
         <!-- Верхнє віконце що відображає ім'я користувача та пропонує увійти гостю та вийти зареєстрованому користувачу -->
         <div align="right">
-            <p> You logged as <%=((CommonUser) request.getSession().getAttribute("role")).getName()%> </p>
+
             <% if(request.getSession().getAttribute("role") == null
                     || !(request.getSession().getAttribute("role") instanceof CommonUser)) { %>
             <form action="ToSignIn", method="get">
                 <input type="submit" value="Sing in">
             </form>
             <% } else { %>
+            <p> You logged as <%=((CommonUser) request.getSession().getAttribute("role")).getName()%> </p>
             <form action="LogOut", method="post">
                 <input type="submit" value="Log out">
             </form>
