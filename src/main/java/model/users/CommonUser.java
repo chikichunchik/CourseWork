@@ -1,11 +1,6 @@
 package model.users;
 
-import model.database.TopicsDatabase;
 import model.database.UsersDatabase;
-import model.elements.Post;
-import model.elements.Topic;
-
-import javax.persistence.criteria.CriteriaBuilder;
 
 public class CommonUser extends Guest{ // клас описує актора "зареєстрований користувач"
     private String name;
